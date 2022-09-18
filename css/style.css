@@ -2,12 +2,13 @@
 
 /* 전제를 감싸고 있는 박스 */
 .wrap-box{
-    width: 100vw;
-    height: 100vh;
+    width: 1920px;
+    height: 1080px;
     background-color: #e8eeff;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 
@@ -669,7 +670,7 @@
     align-items: center;
 }
 
-.delet-button-area-cancel{
+.delet-button-area-cancle{
     width: 30%;
     height: 60%;
     outline: none;
@@ -687,7 +688,7 @@
     cursor: pointer;
 }
 
-.delet-button-area-cancel:hover{
+.delet-button-area-cancle:hover{
     background-color: rgb(246, 246, 246);
 }
 
@@ -742,7 +743,7 @@
     align-items: center;
 }
 
-.edit-button-area-cancel{
+.edit-button-area-cancle{
     width: 30%;
     height: 60%;
     outline: none;
@@ -760,7 +761,7 @@
     cursor: pointer;
 }
 
-.edit-button-area-cancel:hover{
+.edit-button-area-cancle:hover{
     background-color: rgb(246, 246, 246);
 }
 
@@ -1454,7 +1455,6 @@ span{
     align-items: center;
     text-align: center;
     margin-bottom: 30px;
-
 }
 
 #agree{
@@ -1477,6 +1477,8 @@ span{
     font-family: "Font Awesome 6 Free";
     content: '\f00c';
     font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
 }
 
 #agree:hover{
@@ -1501,7 +1503,7 @@ span{
     align-items: center;
 }
 
-.delete-cancle{
+.delete-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
@@ -1691,7 +1693,7 @@ span{
 
 /* 관리항목 추가시 */
 .manage-add-modal-wrap{
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -1878,7 +1880,7 @@ span{
     align-items: center;
 }
 
-.manage-cancle{
+.manage-cancel{
     width: 30%;
     height: 100%;
     background-color: transparent;
@@ -2231,9 +2233,8 @@ span{
 
 
 
-
 /* 관리항목 수정 취소 클릭시 */
-.content-eidt-cancle-modal-wrap{
+.content-edit-cancel-modal-wrap{
     display: none;
     position: absolute;
     top: 0;
@@ -2245,11 +2246,12 @@ span{
 
 }
 
-.content-eidt-cancle-modal-wrap.active{
+.content-edit-cancel-modal-wrap.active{
     display: block;
 }
 
-.content-eidt-cancle-modal{
+
+.content-edit-cancel-modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2267,7 +2269,7 @@ span{
     align-items: center;
 }
 
-.content-eidt--cancle-modal-title{
+.content-edit-cancel-modal-title{
     width: 100%;
     height: 25%;
     display: flex;
@@ -2279,11 +2281,11 @@ span{
     color: #0C2775;
 }
 
-.content-eidt--cancle-modal-title p{
+.content-edit-cancel-modal-title p{
     margin-top: 20px;
 }
 
-.content-eidt-cancle-modal-txt{
+.content-edit-cancel-modal-txt{
     width: 100%;
     height: 20%;
     display: flex;
@@ -2295,7 +2297,7 @@ span{
     margin-top: 10px;
 }
 
-.content-eidt-cancle-button{
+.content-edit-cancel-button{
     width: 80%;
     height: 17%;
     display: flex;
@@ -2304,7 +2306,7 @@ span{
     margin-top: 10px;
 }
 
-.content-eidt-cancle-cancle{
+.content-edit-cancel-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
@@ -2316,7 +2318,7 @@ span{
     cursor: pointer;
 }
 
-.content-eidt-cancle-add{
+.content-edit-cancel-add{
     width: 35%;
     height: 100%;
     background-color: #0C2775;
@@ -2332,7 +2334,7 @@ span{
 
 
 /* 관리항목 취소 클릭시 */
-.content-cancle-modal-wrap{
+.content-cancel-modal-wrap{
     display: none;
     position: absolute;
     top: 0;
@@ -2344,11 +2346,11 @@ span{
 
 }
 
-.content-cancle-modal-wrap.active{
+.content-cancel-modal-wrap.active{
     display: block;
 }
 
-.content-cancle-modal{
+.content-cancel-modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2366,7 +2368,7 @@ span{
     align-items: center;
 }
 
-.cancle-modal-title{
+.cancel-modal-title{
     width: 100%;
     height: 25%;
     display: flex;
@@ -2379,11 +2381,11 @@ span{
 }
 
 
-.cancle-modal-title p{
+.cancel-modal-title p{
     margin-top: 10px;
 }
 
-.cancle-modal-txt{
+.cancel-modal-txt{
     width: 100%;
     height: 20%;
     display: flex;
@@ -2395,7 +2397,7 @@ span{
     margin-top: 10px;
 }
 
-.cancle-agree{
+.cancel-agree{
     width: 100%;
     height: auto;
     display: flex;
@@ -2406,12 +2408,12 @@ span{
 
 }
 
-.cancle-agree-text{
+.cancel-agree-text{
     color: #959595;
     margin-left: 15px;
 }
 
-.cancle-button{
+.cancel-button{
     width: 80%;
     height: 17%;
     display: flex;
@@ -2420,7 +2422,7 @@ span{
     margin-top: 10px;
 }
 
-.cancle-cancle{
+.cancel-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
@@ -2432,7 +2434,7 @@ span{
     cursor: pointer;
 }
 
-.cancle-add{
+.cancel-add{
     width: 35%;
     height: 100%;
     background-color: #0C2775;
@@ -2447,7 +2449,7 @@ span{
 
 
 /* 고객 정보 취소 클릭시 */
-.customer-information-cancle-modal-wrap{
+.customer-information-cancel-modal-wrap{
     display: none;
     position: absolute;
     top: 0;
@@ -2459,11 +2461,11 @@ span{
 
 }
 
-.customer-information-cancle-modal-wrap.active{
+.customer-information-cancel-modal-wrap.active{
     display: block;
 }
 
-.customer-information-cancle-modal{
+.customer-information-cancel-modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2481,7 +2483,7 @@ span{
     align-items: center;
 }
 
-.customer-information-cancle-modal-title{
+.customer-information-cancel-modal-title{
     width: 100%;
     height: 25%;
     display: flex;
@@ -2494,11 +2496,11 @@ span{
 }
 
 
-.customer-information-cancle-modal-title p{
+.customer-information-cancel-modal-title p{
     margin-top: 10px;
 }
 
-.customer-information-cancle-modal-txt{
+.customer-information-cancel-modal-txt{
     width: 100%;
     height: 20%;
     display: flex;
@@ -2510,7 +2512,7 @@ span{
     margin-top: 10px;
 }
 
-.customer-informationcancle-agree{
+.customer-informationcancel-agree{
     width: 100%;
     height: auto;
     display: flex;
@@ -2518,15 +2520,14 @@ span{
     align-items: center;
     text-align: center;
     margin-bottom: 30px;
-
 }
 
-.customer-information-cancle-agree-text{
+.customer-information-cancel-agree-text{
     color: #959595;
     margin-left: 15px;
 }
 
-.customer-information-cancle-button{
+.customer-information-cancel-button{
     width: 80%;
     height: 17%;
     display: flex;
@@ -2535,7 +2536,7 @@ span{
     margin-top: 10px;
 }
 
-.customer-information-cancle-cancle{
+.customer-information-cancel-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
@@ -2547,7 +2548,7 @@ span{
     cursor: pointer;
 }
 
-.customer-information-cancle-add{
+.customer-information-cancel-add{
     width: 35%;
     height: 100%;
     background-color: #0C2775;
@@ -2896,12 +2897,7 @@ span{
 }
 
 
-
-
-
-
-
-@media (max-width: 1199px){
+/* @media (max-width: 1199px){
     .wrap-box{
         width: 100vw;
         height: 100vh;
@@ -2961,8 +2957,8 @@ span{
 } /* 1199px */
 
 
-@media (max-width:959px) {
-/* 데스크탑 */
+/* @media (max-width:959px) {
+데스크탑
 .customer-container{
     width: 25%;
 }
@@ -3019,13 +3015,11 @@ span{
 .search-box{
     height: 60px;
 }
+959 */
 
 
-} /* 959 */
-
-
-@media (max-width:759px) {
-    /* 타블렛 */
+/* @media (max-width:759px) {
+    타블렛
     .customer-container{
         width: 30%;
     }
@@ -3094,11 +3088,11 @@ span{
     .people-icon{
         width: 22px;
     }
-} /* 759px */
+} 759px */
     
 
-@media (max-width:500px) {
-/* 스마트폰 가로 */
+/* @media (max-width:500px) {
+스마트폰 가로
 .customer-container{
     width: 35%;
 }
@@ -3176,7 +3170,7 @@ span{
 .people-icon{
     width: 22px;
 }
-} /* 500px */
+} 500px */
     
 
     

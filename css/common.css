@@ -16,7 +16,7 @@ a{
 
 ol,ul,li{
     list-style: none;
-}
+} s
 
 img,svg{
     width: 100%;
@@ -24,13 +24,18 @@ img,svg{
     object-fit: cover;
 }
 
-/* 스크롤바 기능 숨기기 */
-body{
-    width:  100vw;
-    height: 100vh;
-    -ms-overflow-style: none;
-    }
-    
-   ::-webkit-scrollbar {
-     display: none;
-   }
+::-webkit-scrollbar {
+	width: 5px; /*스크롤바의 너비*/
+}
+::-webkit-scrollbar-thumb {
+ background-color: #D1DDFF; /*스크롤바의 색상*/
+ border-radius: 50px;
+}
+ 
+::-webkit-scrollbar-track {
+  background-color: #fff; /*스크롤바 트랙 색상*/
+}
+
+html{
+    background-color: #e8eeff;
+}
