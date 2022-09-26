@@ -670,7 +670,7 @@
     align-items: center;
 }
 
-.delet-button-area-cancle{
+.delet-button-area-cancel{
     width: 30%;
     height: 60%;
     outline: none;
@@ -688,7 +688,7 @@
     cursor: pointer;
 }
 
-.delet-button-area-cancle:hover{
+.delet-button-area-cancel:hover{
     background-color: rgb(246, 246, 246);
 }
 
@@ -719,7 +719,6 @@
 
 
 /* 수정 버튼 클릭시 보이는 버튼 영역 */
-
 .edit-button-wrap{
     display: none;
     width: 100%;
@@ -743,7 +742,7 @@
     align-items: center;
 }
 
-.edit-button-area-cancle{
+.edit-button-area-cancel{
     width: 30%;
     height: 60%;
     outline: none;
@@ -761,7 +760,7 @@
     cursor: pointer;
 }
 
-.edit-button-area-cancle:hover{
+.edit-button-area-cancel:hover{
     background-color: rgb(246, 246, 246);
 }
 
@@ -1291,13 +1290,12 @@ span{
 .customer-button{
     width: 80%;
     height: 10%;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.customer-cancle{
+.customer-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
@@ -2637,7 +2635,7 @@ span{
     margin-top: 10px;
 }
 
-.customer-information-edit-cancle{
+.customer-information-edit-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
