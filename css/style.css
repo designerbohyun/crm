@@ -2,11 +2,11 @@
 
 /* 전제를 감싸고 있는 박스 */
 .wrap-box{
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
     background-color: #e8eeff;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin: 0 auto;
 }
@@ -123,7 +123,7 @@
 .customer-container-list-align-area{
     position: relative;
     width: 100%;
-    height: 35px;
+    height: auto;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -132,70 +132,29 @@
 
 .customer-list-align{
     width: 30%;
-    height: 100%;
+    height: 35px;
     background-color: #E7EDFF;
     border-radius: 10px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-right: 25px;
+    margin-right: 20px;
     cursor: pointer;
-}
+    padding: 2px 10px;
+    border: none;
+    outline: none;
 
-.customer-list-align p{
-    font-size: 14px;
+    /* arrow 버튼 styling replace */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../img/arrow-down.svg);
+    background-position: right 10px top 50%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    padding-right: 30px;
+
     font-weight: 500;
-    color: #2A61FF;
+    color: #2657e9;
 }
-
-.customer-list-align .img{
-    width: 12px;
-}
-
-
-.customer-list-align-detail-wrap{
-    display: none;
-    position: absolute;
-    width: 30%;
-    height: 70px;
-    top: 0;
-    right: 0;
-    z-index: 9;
-    background-color: #E7EDFF;
-    border-radius: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-right: 25px;
-}
-
-.customer-list-align-detail-wrap.active{
-    display: block;
-}
-
-.customer-list-align-detail1,
-.customer-list-align-detail2{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    justify-content: left;
-    padding: 0 10px;
-    align-items: center;
-    color: #2A61FF;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 15px;
-}
-.customer-list-align-detail1:hover{
-    background-color: #DBE5FF;
-}
-
-.customer-list-align-detail2:hover{
-    background-color: #DBE5FF;
-}
-
-
 
 /* 고객 명단 영역 : 고객 리스트 영역 */
 .customer-container-customer-list-area{
@@ -210,7 +169,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 88%;
+    height: 90%;
     overflow: scroll;
 }
 
@@ -268,7 +227,7 @@
 .customer-list-name p {
 
     font-size: 18px;
-    overflow:hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -276,7 +235,7 @@
 .detail-icon{
     opacity: 0;
     transition: all 0.3s;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .customer:hover .detail-icon{
@@ -286,7 +245,7 @@
 .customer-detail-menu{
     display: none;
     position: absolute;
-    left: 100%;
+    left: 98%;
     width: 160px;
     height: auto;
     padding: 10px;
@@ -354,17 +313,17 @@
 
 /* 검색창과 내용 영역 박스 */
 .sc-wrap-box{
-    width: 79%;
-    height: 97%;
+    width: 80%;
+    height: 96%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* 검색창 */
 .search-box{
-    width: 100%;
+    width: 98%;
     height: 75px;
     background-color: #fff;
     border-radius: 20px;
@@ -373,6 +332,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .search-detail-wrap{
@@ -565,12 +525,13 @@
 
 /* 관리항목 추가,수정,삭제버튼 영역 */
 .sc-but-area{
-    width: 100%;
+    width: 98%;
     height: 70px;
     background-color: transparent;
     display: flex;
     justify-content: end;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .sc-but-area.active{
@@ -793,8 +754,8 @@
 
 /* 내용 영역 박스  */
 .contents-box{
-    width: 100%;
-    height: 82%;
+    width: 98%;
+    height: 79%;
     background-color: #fff;
     border-radius: 20px;
     box-sizing: border-box;
@@ -2894,281 +2855,3 @@ span{
     font-weight: 600;
 }
 
-
-/* @media (max-width: 1199px){
-    .wrap-box{
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .customer-container{
-        width: 22%;
-    }
-
-    .sc-wrap-box{
-        width: 73.5%;
-    }
-
-    .sc-but{
-        width: 40%;
-    }
-
-    .search-detail{
-        width: 28%;
-    }
-
-    .search-bar{
-        width: 72%;
-    }
-
-
-    .list-arrow {
-        width: 20px;
-    }
-
-
-    .customer-container-list-align-area {
-        margin-top: 42px;
-    }
-
-
-    .customer-list-align{
-        width: 40%;
-    }
-
-    .customer{
-        height: 55px;
-    }
-
-    .customer-container-title{
-        font-size: 18px;
-    }
-
-    .customer-list-name p{
-        font-size: 16px;
-    }
-
-
-    .search-box{
-        height: 65px;
-    }
-} /* 1199px */
-
-
-/* @media (max-width:959px) {
-데스크탑
-.customer-container{
-    width: 25%;
-}
-
-.sc-wrap-box{
-    width: 70%;
-}
-
-.sc-but{
-    width: 43%;
-}
-
-.search-detail{
-    width: 30%;
-}
-
-.search-bar{
-    width: 70%;
-}
-
-
-.list-icon,.list-arrow {
-    width: 17px;
-}
-
-
-.list-txt p {
-    font-size: 15px;
-}
-
-
-.customer-container-list-align-area {
-    margin-top: 42px;
-}
-
-
-.customer-list-align{
-    width: 42%;
-}
-
-.customer{
-    height: 50px;
-}
-
-.customer-container-title{
-    font-size: 16px;
-}
-
-.customer-list-name p{
-    font-size: 14px;
-}
-
-
-.search-box{
-    height: 60px;
-}
-959 */
-
-
-/* @media (max-width:759px) {
-    타블렛
-    .customer-container{
-        width: 30%;
-    }
-    
-    .sc-wrap-box{
-        width: 62.5%;
-    }
-    
-    .sc-but{
-        width: 70%;
-    }
-    
-    .search-detail{
-        width: 40%;
-    }
-    
-    .search-bar{
-        width: 60%;
-    }
-    
-    .customer-add-button{
-        height: 50px;
-        background-color: #2A61FF;
-        border-radius: 10px;
-        box-sizing: border-box;
-    }
-    
-    .list-icon,.list-arrow {
-        width: 17px;
-    }
-    
-    
-    .list-txt p {
-        font-size: 15px;
-    }
-    .hover-blue{
-        margin-right: 15px;
-    }
-    
-    .customer-container-list-align-area {
-        margin-top: 42px;
-    }
-    
-    
-    .customer-list-align{
-        width: 45%;
-    }
-    
-    .customer{
-        height: 50px;
-    }
-    
-    .customer-container-title{
-        font-size: 16px;
-    }
-    
-    .customer-list-name p{
-        font-size: 14px;
-    }
-    
-    
-    .search-box{
-        height: 60px;
-    }
-    
-    .people-icon{
-        width: 22px;
-    }
-} 759px */
-    
-
-/* @media (max-width:500px) {
-스마트폰 가로
-.customer-container{
-    width: 35%;
-}
-
-.sc-wrap-box{
-    width: 55%;
-}
-
-.sc-but{
-    width: 100%;
-}
-
-.search-detail{
-    width: 35%;
-}
-
-.search-bar{
-    width: 65%;
-}
-
-.list-txt{
-    width: 100%;
-}
-
-.list-icon, .list-arrow{
-    display: none;
-}
-
-.customer-add-button{
-    height: 50px;
-    background-color: #2A61FF;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.list-icon,.list-arrow {
-    width: 17px;
-} 
-
-
-.list-txt p {
-    font-size: 15px;
-}
-.hover-blue{
-    margin-right: 15px;
-}
-
-.customer-container-list-align-area {
-    margin-top: 42px;
-}
-
-
-.customer-list-align{
-    width: 60%;
-}
-
-.customer{
-    height: 50px;
-}
-
-.customer-container-title{
-    font-size: 16px;
-    margin-left: 30px;
-}
-
-.customer-list-name p{
-    font-size: 14px;
-}
-
-
-.search-box{
-    height: 60px;
-}
-
-.people-icon{
-    width: 22px;
-}
-} 500px */
-    
-
-    

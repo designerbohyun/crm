@@ -38,4 +38,5 @@ img,svg{
 
 html{
     background-color: #e8eeff;
+    overflow-x: hidden;
 }
