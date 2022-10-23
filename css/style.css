@@ -156,6 +156,14 @@
     color: #2657e9;
 }
 
+.customer-list-align > option{
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+
 /* 고객 명단 영역 : 고객 리스트 영역 */
 .customer-container-customer-list-area{
     width: 100%;
@@ -396,8 +404,8 @@
 }
 
 
-.saerch-detail-list1,
-.saerch-detail-list2{
+.search-detail-list1,
+.search-detail-list2{
     width: 100%;
     height: 50%;
     border-bottom: 1px solid #ddd;
@@ -410,11 +418,11 @@
     cursor: pointer;
 }
 
-.saerch-detail-list1:hover{
+.search-detail-list1:hover{
     background-color: #F4F7FF;
 }
 
-.saerch-detail-list2:hover{
+.search-detail-list2:hover{
     background-color: #F4F7FF;
 }
 
@@ -591,7 +599,7 @@
     background-color: rgb(242, 242, 242);
 }
 
-.delet{
+.delete{
     background-color: #FF0000;
     color: #fff;
     transition: all 0.3s;
@@ -600,7 +608,7 @@
 
 }
 
-.delet:hover{
+.delete:hover{
     background-color: #eb0000;
 }
 
@@ -608,7 +616,7 @@
 
 /* 삭제 버튼 클릭시 보이는 버튼 영역 */
 
-.delet-button-wrap{
+.delete-button-wrap{
     display: none;
     width: 100%;
     height: 70px;
@@ -616,11 +624,11 @@
     position: relative;
 }
 
-.delet-button-wrap.active{
+.delete-button-wrap.active{
     display: block;
 }
 
-.delet-button-area{
+.delete-button-area{
     position: absolute;
     top: 0;
     right: 0;
@@ -631,7 +639,7 @@
     align-items: center;
 }
 
-.delet-button-area-cancel{
+.delete-button-area-cancel{
     width: 30%;
     height: 60%;
     outline: none;
@@ -649,11 +657,11 @@
     cursor: pointer;
 }
 
-.delet-button-area-cancel:hover{
+.delete-button-area-cancel:hover{
     background-color: rgb(246, 246, 246);
 }
 
-.delet-button-area-delet{
+.delete-button-area-delete{
     width: 30%;
     height: 60%;
     outline: none;
@@ -671,7 +679,7 @@
 }
 
 
-.delet-button-area-delet:hover{
+.delete-button-area-delete:hover{
     background-color: #eb0000;
 }
 
@@ -725,7 +733,7 @@
     background-color: rgb(246, 246, 246);
 }
 
-.edit-button-area-delet{
+.edit-button-area-delete{
     width: 30%;
     height: 60%;
     outline: none;
@@ -743,7 +751,7 @@
 }
 
 
-.edit-button-area-delet:hover{
+.edit-button-area-delete:hover{
     background-color: #2656e7;
 }
 
