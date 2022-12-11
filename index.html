@@ -36,15 +36,24 @@
             
             </div>
 
-
-
-            <!-- 고객 명단 영역 : 고객 리스트 정렬버튼 영역 -->
-            <label class="customer-container-list-align-area">
-                <select class="customer-list-align">
-                    <option value="alphabetical">가나다순</option>
-                    <option value="recent">최신순</option>
+            <!-- 고객 명단 영역: 고객 리스트 정렬버튼 영역 : 수정본 -->
+            <div class="custom-select">
+                <select>
+                  <option value="alphabetical">가나다순</option>
+                  <option value="recent">최신순</option>
                 </select>
-            </label>
+                <div class="selected">
+                  <p>가나다순</p>
+                  <div class="arrow">
+                      <svg><path d="M12 15.375 6 9.375 7.4 7.975 12 12.575 16.6 7.975 18 9.375Z"/></svg>
+                  </div>
+                </div>
+                <div class="select-items select-hide">
+                  <div class="item">가나다순</div>
+                  <div class="item">최신순</div>
+                </div>
+              </div>
+        
 
             <!-- 고객 명단 영역 : 고객 리스트 영역 -->
             <div class="customer-container-customer-list-area">
@@ -246,34 +255,27 @@
             <!-- 검색창 -->
             <div class="search-box">
                 <!-- 검색결과 기준 선택 -->
-
-                <div class="search-detail-wrap">
-                    <select class="search-detail">
-                        <div class="list-icon">
-                            <img src="./img/list-icon.svg" alt="">
-                        </div>
-                        <option class="list-txt">
-                            <p>내용</p>
-                        </option>
-
-                        <option class="search-detail-list2">
-                            <p>날짜</p>
-                        </option>
-                        <div class="list-arrow">
-                            <img src="./img/list-arrow.svg" alt="">
-                        </div>
+                <div class="search-select">
+                    <select>
+                      <option value="content">내용</option>
+                      <option value="date">날짜</option>
                     </select>
-    
-                    <div class="search-detail-list">
-                            <li class="search-detail-list1">
-                                <p>내용</p>
-                            </li>
-                            <li class="search-detail-list2">
-                                <p>날짜</p>
-                            </li>
+                    <div class="search-selected">
+                    <div class="selected-icon">
+                        <svg width="27" height="15" viewBox="0 0 27 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 9H3V6H0V9ZM0 15H3V12H0V15ZM0 3H3V0H0V3ZM6 9H27V6H6V9ZM6 15H27V12H6V15ZM6 0V3H27V0H6Z" fill="#2A61FF"/>
+                            </svg>
                     </div>
-    
-                </div>
+                      <p>내용</p>
+                      <div class="arrow">
+                          <svg><path d="M12 15.375 6 9.375 7.4 7.975 12 12.575 16.6 7.975 18 9.375Z"/></svg>
+                      </div>
+                    </div>
+                    <div class="search-select-items search-select-hide">
+                      <div class="item"><p>내용</p></div>
+                      <div class="item"><p>날짜</p></div>
+                    </div>
+                  </div>
 
 
                 <!-- 검색입력창, 지우기버튼, 검색버튼 -->
@@ -1240,6 +1242,20 @@
 
     <!-- script 연결 : 고객 명단 어플 소개 페이지 - swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let selected = document.getElementsByClassName("selected")[0];
+        let items = document.getElementsByClassName("select-items")[0];
+        selected.addEventListener("click", function(e) {
+            e.stopPropagation();
+            items.classList.toggle("select-hide");
+        });
 
+        let searchSelected = document.getElementsByClassName("search-selected")[0];
+        let searchItems = document.getElementsByClassName("search-select-items")[0];
+        searchSelected.addEventListener("click", function(e) {
+            e.stopPropagation();
+            searchItems.classList.toggle("search-select-hide");
+        });
+      </script>    
 </body>
 </html>
