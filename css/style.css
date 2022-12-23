@@ -121,126 +121,12 @@
     outline: none;
 }
 
-/* 고객 명단 영역 : 고객 리스트 정렬버튼 영역 */
-/* .customer-container-list-align-area{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-top: 68px;
-} */
-
-/* .customer-list-align{
-    width: 30%;
-    height: 35px;
-    background-color: #E7EDFF;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-right: 20px;
-    cursor: pointer;
-    padding: 2px 10px;
-    border: none;
-    outline: none; */
-
-    /* arrow 버튼 styling replace */
-    /* appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url(../img/arrow-down.svg);
-    background-position: right 10px top 50%;
-    background-repeat: no-repeat;
-    background-size: 10px;
-    padding-right: 30px;
-
-    font-weight: 500;
-    color: #2657e9;
-} */
-
-/* .customer-list-align > option{
-    position: absolute !important;
-    top: 100%;
-    left: 0;
-    z-index: 99;
-} */
-
-/* 고객 명단 영역 : 고객 리스트 정렬버튼 영역 수정본 */
-/* .customer-container-list-align-area{
-    position: relative;
-    width: 40%;
-    height: auto;
-    margin-top: 75px;
-}
-.customer-container-list-align-area .first-option{
-    background-color: #E7EDFF;
-    width: 100%;
-    line-height: 50px;
-    padding: 0px 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 10px 0px;
-    color: #2657e9;
-    font-size: 17px;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 15px;
-    display: block;
-    border:none;
-}
-.customer-container-list-align-area svg{
-    position: absolute;
-    top: 14px;
-    right: 10px;
-    width: 24px;
-    height: 24px;
-    padding: 4px;
-    transition-duration: .2s;
-    fill: #2657e9;
-}
-.customer-container-list-align-area .rotate{
-    transform: rotate(180deg);
-}
-.customer-container-list-align-area .first-option:active + svg{
-    background-color: rgba(0, 0, 0, 0.036);
-}
-.customer-container-list-align-area .customer-list-align-option-container{
-    width: 100%;
-    height: auto;
-    overflow: auto;
-    background-color: #E7EDFF;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 15px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 10px 0px;
-    z-index: 9;
-}
-.customer-container-list-align-area ul .customer-list-align-option{
-    list-style: none;
-    padding: 10px;
-    margin-left: -40px;
-    padding-left: 20px;
-    cursor: pointer;
-    color: #2657e9;
-}
-.customer-container-list-align-area .customer-list-align-option-container .customer-list-align-option:hover{
-    background-color: #4a70e21e;
-}
-.customer-container-list-align-area .customer-list-align-option-container::-webkit-scrollbar{
-    width: 20px;
-}
-.customer-container-list-align-area .customer-list-align-option-container::-webkit-scrollbar-thumb{
-    background-color: #54c0ff;
-    border-radius: 10px;
-    margin: 10px;
-    width: 2px;
-    border: 6px solid white;
-} */
-
-
 /*고객 명단*/
 .custom-select {
     position: relative;
     width:100%;
     margin-top: 75px;
+    z-index: 9;
   }
 
   .custom-select select {
@@ -249,6 +135,7 @@
   .selected {
     width: 40%;
     background-color: #E7EDFF;
+    margin-right: 10px;
   }
   .selected p {
     margin: 0;
@@ -257,10 +144,7 @@
   .selected .img{
     width: 12px;
   }
-  .select-items{
-      width: 40%;
-      color: #2657e9;
-  }
+
   .select-items div,.selected {
     padding: 10px 5px;
     border-radius: 10px;
@@ -270,19 +154,24 @@
     cursor: pointer;
     user-select: none;
     margin-left: auto;
-    margin-right: 10px;
     transition: 0.2s;
   }
+
   .select-items {
     position: absolute;
     background-color: #E7EDFF;
+    width: 40%;
+    color: #2657e9;
     top: 100%;
     left: 0;
-    right: 0;
-    z-index: 99;
-    margin-top: 5px;
+    right: 3%;
     border-radius: 10px;
     margin-left: auto;
+    margin-top: 5px;
+  }
+
+  .item-position{
+      height: 44px;
   }
 
   .select-items .item:hover{
@@ -3059,6 +2948,10 @@ span{
         margin-right: 5px;
     }
 
+    .select-items{
+        right: 2%;
+    }
+
     .customer-container-customer-list-area{
         margin-top: 10px;
     }
@@ -3165,6 +3058,10 @@ span{
 
     .selected{
         margin-right: 5px;
+    }
+
+    .select-items{
+        right: 2%;
     }
 
     .customer-container-customer-list-area{
