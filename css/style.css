@@ -240,7 +240,7 @@
 }
 
 /* customer 클릭했을때, hover-blue 영역이 보이게 유지 */
-.hover-blue.acitve{
+.hover-blue.active{
     opacity: 1;
 }
 
