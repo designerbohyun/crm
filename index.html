@@ -16,10 +16,10 @@
 </head>
 <body>
     <!-- 전체 클래스명 변경하기 : 줄이지 말고, 다시 정리하기.-->
-    <!-- 전제를 감싸고 있는 박스 -->
+    <!-- 1. 전제를 감싸고 있는 박스 -->
     <div class="wrap-box">
 
-        <!-- 고객 명단 영역 : container로 이름 변경-->
+        <!-- 2. 고객 명단 영역 : container로 이름 변경-->
         <div class="customer-container">
             <!-- 고객 명단 영역 : 상단 제목, 검색창 영역 -->
             <div class="customer-container-title-wrap">
@@ -249,7 +249,7 @@
 
         </div>
 
-        <!-- 검색창과 내용 영역 박스 -->
+        <!-- 3. 검색창과 내용 영역 박스 -->
         <div class="sc-wrap-box">
             
             <!-- 검색창 -->
@@ -760,7 +760,7 @@
     </div>
 
 
-            <!-- 고객 명단 추가버튼 클릭시, 고객 명단 추가 모달창 -->
+            <!-- 4. 고객 명단 추가버튼 클릭시, 고객 명단 추가 모달창 -->
             <div class="customer-add-modal-wrap">
                 <div class="customer-add-modal">
                     <div class="customer-title">
@@ -779,7 +779,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <input class="address-input" type="text">
+                        <textarea onkeydown="resize(this)" name="address-input" class="address-input autosize"></textarea>
                     </div>
     
                     <div class="customer-guide">
@@ -794,7 +794,7 @@
             </div>
 
             
-            <!-- 고객 정보 수정버튼 클릭시,  -->
+            <!-- 5. 고객 정보 수정버튼 클릭시,  -->
             <div class="customer-edit-modal-wrap">
                 <div class="customer-edit-modal">
                     <div class="customer-title">
@@ -813,7 +813,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <input class="address-input" type="text">
+                        <textarea onkeydown="resize(this)" name="address-input" class="address-input autosize"></textarea>
                     </div>
     
                     <div class="customer-guide">
@@ -827,7 +827,7 @@
                 </div>
             </div>
 
-             <!-- 고객 정보 수정을 취소 클릭시 -->
+             <!-- 6. 고객 정보 수정을 취소 클릭시 -->
              <div class="customer-information-edit-modal-wrap">
                 <div class="customer-information-edit-modal">
                     <div class="customer-information-edit-modal-title">
@@ -849,57 +849,57 @@
                 </div> 
             </div>             
 
-            <!-- 고객 정보 삭제 클릭시 -->
-            <div class="customer-delete-modal-wrap">
-                <div class="customer-delete-modal">
-                    <div class="delete-modal-title">
-                        <div class="delete-warn-icon">
+            <!-- 7. 고객 정보 삭제 클릭시 -->
+            <div class="delete-before-modal-wrap customer-delete-before">
+                <div class="delete-before-modal">
+                    <div class="delete-before-modal-title">
+                        <div class="delete-before-warn-icon">
                             <img src="./img/delete_warn_icon.png" alt="">
                         </div>
                         <p>고객 정보를 삭제하시겠습니까?</p>
                     </div>
     
-                    <div class="delete-modal-txt">
+                    <div class="delete-before-modal-txt">
                         <p>삭제하시면 고객정보와 관련 관리항목은 영구적으로 삭제됩니다.
                             <br>이후 고객 정보와 관리 항목은 복구가 불가합니다.
                         </p>
                     </div>
     
-                    <div class="delete-agree">
+                    <div class="delete-before-agree">
                         <input id="agree" type="checkbox">
-                        <label for="agree" class="delete-agree-text">위 내용을 확인하셨으며 삭제에 동의합니다.</label>
+                        <label for="agree" class="delete-before-agree-text">위 내용을 확인하셨으며 삭제에 동의합니다.</label>
                     </div>
     
-                    <div class="delete-button">
-                        <button class="delete-cancel">취소</button>
-                        <button class="delete-add">삭제</button>
+                    <div class="delete-before-button">
+                        <button class="delete-before-cancel">취소</button>
+                        <button class="delete-before-add">삭제</button>
                     </div>
                 </div>
             </div>         
             
-             <!-- 고객 정보 취소 클릭시 -->
-             <div class="customer-information-cancel-modal-wrap">
-                <div class="customer-information-cancel-modal">
-                    <div class="customer-information-cancel-modal-title">
-                        <div class="customer-information-cancel-warn-icon">
+             <!-- 8. 고객 정보 취소 클릭시 -->
+             <div class="input-cancel-modal-wrap customer-input-cancel">
+                <div class="input-cancel-modal">
+                    <div class="input-cancel-modal-title">
+                        <div class="input-cancel-warn-icon">
                             <img src="./img/cancel_warn_icon.png" alt="">
                         </div>
                         <p>고객 추가를 취소하시겠습니까?</p>
                     </div>
     
-                    <div class="customer-information-cancel-modal-txt">
+                    <div class="input-cancel-modal-txt">
                         <p>취소할 경우, 입력한 데이터는 저장되지 않습니다.
                         </p>
                     </div>
     
-                    <div class="customer-information-cancel-button">
-                        <button class="customer-information-cancel-cancel">취소</button>
-                        <button class="customer-information-cancel-add">확인</button>
+                    <div class="input-cancel-button">
+                        <button class="input-cancel-cancel">취소</button>
+                        <button class="input-cancel-add">확인</button>
                     </div>
                 </div>
             </div>             
 
-            <!-- 고객 상세 정보영역 -->
+            <!-- 9.고객 상세 정보영역 -->
             <div class="customer-detail-modal-wrap">
                 <div class="customer-detail-modal">
 
@@ -925,7 +925,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <input class="address-input" type="text">
+                        <textarea onkeydown="resize(this)" name="address-input" class="address-input autosize"></textarea>
                     </div>
 
     
@@ -937,7 +937,7 @@
             </div>
     
 
-            <!-- 관리항목 추가 클릭시 -->
+            <!-- 10. 관리항목 추가 클릭시 -->
             <div class="manage-add-modal-wrap">
                 <div class="manage-add-modal">
 
@@ -986,7 +986,7 @@
             </div>
 
 
-            <!-- 관리항목 수정 클릭시 -->
+            <!-- 11. 관리항목 수정 클릭시 -->
             <div class="manage-edit-modal-wrap">
                 <div class="manage-edit-modal">
 
@@ -1034,7 +1034,7 @@
                 </div>
             </div>
 
-            <!-- 관리항목 보기 클릭시 -->
+            <!-- 12. 관리항목 보기 클릭시 -->
             <div class="manage-show-modal-wrap">
                 <div class="manage-show-modal">
 
@@ -1081,7 +1081,7 @@
                 </div>
             </div>
 
-            <!-- 관리항목 수정 취소 클릭시 -->
+            <!-- 13. 관리항목 수정 취소 클릭시 -->
             <div class="content-edit-cancel-modal-wrap">
                 <div class="content-edit-cancel-modal">
                     <div class="content-edit-cancel-modal-title">
@@ -1103,70 +1103,67 @@
                 </div>
             </div>  
 
-            <!-- 관리항목 삭제 클릭시 -->
-            <div class="customer-delete-modal-wrap">
-                            <div class="customer-delete-modal">
-                                <div class="delete-modal-title">
-                                    <div class="delete-warn-icon">
+            <!-- 14. 관리항목 삭제 클릭시 -->
+            <div class="delete-before-modal-wrap content-delete-before">
+                            <div class="delete-before-modal">
+                                <div class="delete-before-modal-title">
+                                    <div class="delete-before-warn-icon">
                                         <img src="./img/delete_warn_icon.png" alt="">
                                     </div>
                                     <p>관리 항목을 삭제하시겠습니까?</p>
                                 </div>
                 
-                                <div class="delete-modal-txt">
+                                <div class="delete-before-modal-txt">
                                     <p>삭제하시면 선택한 관리항목은 영구적으로 삭제됩니다.
                                         <br>이후 관리 항목은 복구가 불가합니다.
                                     </p>
                                 </div>
                 
-                                <div class="delete-agree">
+                                <div class="delete-before-agree">
                                     <input id="agree" type="checkbox">
-                                    <label for="agree" class="delete-agree-text">위 내용을 확인하셨으며 삭제에 동의합니다.</label>
+                                    <label for="agree" class="delete-before-agree-text">위 내용을 확인하셨으며 삭제에 동의합니다.</label>
                                 </div>
                 
-                                <div class="delete-button">
-                                    <button class="delete-cancel">취소</button>
-                                    <button class="delete-add">삭제</button>
+                                <div class="delete-before-button">
+                                    <button class="delete-before-cancel">취소</button>
+                                    <button class="delete-before-add">삭제</button>
                                 </div>
                             </div>
             </div>
 
-            <!-- 관리항목 취소 클릭시 -->
-            <div class="content-cancel-modal-wrap">
-                <div class="content-cancel-modal">
-                    <div class="cancel-modal-title">
-                        <div class="cancel-warn-icon">
+            <!-- 15. 관리항목 취소 클릭시 -->
+            <div class="input-cancel-modal-wrap input-cancel">
+                <div class="input-cancel-modal">
+                    <div class="input-cancel-modal-title">
+                        <div class="input-cancel-warn-icon">
                             <img src="./img/cancel_warn_icon.png" alt="">
                         </div>
                         <p>관리항목 추가를 취소하시겠습니까?</p>
                     </div>
     
-                    <div class="cancel-modal-txt">
+                    <div class="input-cancel-modal-txt">
                         <p>취소할 경우, 입력한 데이터는 저장되지 않습니다.
                         </p>
                     </div>
     
-                    <div class="cancel-button">
-                        <button class="cancel-cancel">취소</button>
-                        <button class="cancel-add">확인</button>
+                    <div class="input-cancel-button">
+                        <button class="input-cancel-cancel">취소</button>
+                        <button class="input-cancel-add">확인</button>
                     </div>
                 </div>
             </div>            
 
-            
-
-
-            <!-- 관리항목 수정이 완료되지 않은 경우 모달창 -->
-            <div class="content-edit-nocomplete-modal-wrap">
-                <div class="content-edit-nocomplete-modal">
+            <!-- 16. 관리항목 수정이 완료되지 않은 경우 모달창 -->
+            <div class="content-nocomplete-modal-wrap content-edit">
+                <div class="content-nocomplete-modal">
                     <div class="close-btn">
                         <a href="#">
                             <img src="./img/top-close-button.png" alt="">
                         </a>
                     </div>
 
-                    <div class="edit-nocomplete-modal-title">
-                        <div class="edit-nocomplete-warn-icon">
+                    <div class="content-nocomplete-modal-title">
+                        <div class="content-nocomplete-warn-icon">
                             <img src="./img/no-complete-ico.png" alt="">
                         </div>
                         <p>관리항목 수정이 완료되지 않았습니다.</p>
@@ -1175,17 +1172,17 @@
                 </div>
             </div>
 
-             <!-- 관리항목 등록이 완료되지 않은 경우 모달창 -->
-             <div class="content-add-nocomplete-modal-wrap">
-                <div class="content-add-nocomplete-modal">
+             <!-- 17. 관리항목 등록이 완료되지 않은 경우 모달창 -->
+             <div class="content-nocomplete-modal-wrap content-add">
+                <div class="content-nocomplete-modal">
                     <div class="close-btn">
                         <a href="#">
                             <img src="./img/top-close-button.png" alt="">
                         </a>
                     </div>
 
-                    <div class="add-nocomplete-modal-title">
-                        <div class="add-nocomplete-warn-icon">
+                    <div class="content-nocomplete-modal-title">
+                        <div class="content-nocomplete-warn-icon">
                             <img src="./img/no-complete-ico.png" alt="">
                         </div>
                         <p>관리항목 등록이 완료되지 않았습니다.</p>
@@ -1194,37 +1191,37 @@
                 </div>
             </div>           
 
-             <!-- 관리항목 삭제가 완료되지 않은 경우 모달창 -->
-             <div class="content-delete-nocomplete-modal-wrap">
-                <div class="content-delete-nocomplete-modal">
+             <!-- 18. 관리항목 삭제가 완료되지 않은 경우 모달창 -->
+             <div class="content-nocomplete-modal-wrap content-delete">
+                <div class="content-nocomplete-modal">
                     <div class="close-btn">
                         <a href="#">
                             <img src="./img/top-close-button.png" alt="">
                         </a>
                     </div>
 
-                    <div class="delete-nocomplete-modal-title">
-                        <div class="delete-nocomplete-warn-icon">
+                    <div class="content-nocomplete-modal-title">
+                        <div class="content-nocomplete-warn-icon">
                             <img src="./img/no-complete-ico.png" alt="">
                         </div>
-                        <p>관리항목 등록이 완료되지 않았습니다.</p>
+                        <p>관리항목 삭제가 완료되지 않았습니다.</p>
                     </div>
 
                 </div>
             </div>           
 
 
-             <!-- 관리항목 삭제가 완료된 경우 모달창 -->
-             <div class="content-delete-complete-modal-wrap">
-                <div class="content-delete-complete-modal">
+             <!-- 19. 관리항목 삭제가 완료된 경우 모달창 -->
+             <div class="content-complete-modal-wrap">
+                <div class="content-complete-modal">
                     <div class="close-btn">
                         <a href="#">
                             <img src="./img/top-close-button.png" alt="">
                         </a>
                     </div>
 
-                    <div class="delete-complete-modal-title">
-                        <div class="delete-complete-warn-icon">
+                    <div class="content-complete-modal-title">
+                        <div class="content-complete-warn-icon">
                             <img src="./img/complete-icon.png" alt="">
                         </div>
                         <p>관리항목 삭제가 완료되었습니다.</p>
@@ -1256,6 +1253,12 @@
             e.stopPropagation();
             searchItems.classList.toggle("search-select-hide");
         });
+
+        // 고객 상세 정보 구간 입력창 : 주소 입력하는 것에 맞춰서 영역이 늘어남.
+        function resize(obj){
+            obj.style.height = "1px";
+            obj.style.height = (20+obj.scrollHeight)+"px";
+        }
       </script>    
 </body>
 </html>

@@ -263,7 +263,7 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    cursor: default;
+    cursor: pointer;
     margin-right: 15px;
 }
 
@@ -279,10 +279,21 @@
     opacity: 0;
     transition: all 0.3s;
     margin-left: 10px;
+    width: 8%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .customer:hover .detail-icon{
     opacity: 1;
+}
+
+.detail-icon img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 
 .customer-detail-menu{
@@ -369,7 +380,7 @@
     width: 98%;
     height: 75px;
     background-color: #fff;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     box-shadow: 0 0 15px #c2d1ff;
     display: flex;
@@ -799,7 +810,7 @@
     width: 98%;
     height: 79%;
     background-color: #fff;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: 0 0 15px #d7e1ff;
@@ -1025,7 +1036,7 @@
 .manage-list{
     width: 100%;
     height: 90%;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: åborder-box;
     display: flex;
     flex-direction: column;
@@ -1093,13 +1104,13 @@
 
 .list1{
         box-sizing: border-box;
-    border-radius: 20px;
+     border-radius: 15px;
     text-align: center;
 }
 
 .list2{
     background-color: #F4F7FF;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -1178,7 +1189,7 @@
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1204,17 +1215,17 @@
 }
 
 .customer-name{
-    width: 90%;
+    width: 80%;
     height: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 
 .name-input{
-    width: 75%;
+    width: 77%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1223,17 +1234,17 @@
 }
 
 .customer-number{
-    width: 85%;
+    width: 80%;
     height: 10%;
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
 }
 
 .number-input{
     width: 77%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1242,29 +1253,33 @@
 }
 
 .customer-address{
-    width: 90%;
+    width: 80%;
     height: 10%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
+    justify-content: right;
+    align-items: flex-start;
 }
+
 
 .customer-address span{
     margin-right: 40px;
 }
 
 .address-input{
-    width: 80%;
-    height: 100%;
-    border-radius: 20px;
+    width: 77%;
+    max-height: 75px;
+    border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
     background-color: #F7F7F7;
-    padding: 0 30px;
+    padding: 12px 30px 0;
+    resize: none;
 }
 
+.address-input::-webkit-scrollbar{
+    width: 0px;
+}
 
 span{
     font-size: 14px;
@@ -1304,7 +1319,7 @@ span{
     width: 35%;
     height: 100%;
     background-color: transparent;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: 1px solid #D8D8D8;
     outline: none;
@@ -1316,7 +1331,7 @@ span{
     width: 35%;
     height: 100%;
     background-color: #2A61FF;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1327,22 +1342,22 @@ span{
 
 
 /* 입력을 다 안하고, 수정,등록버튼을 눌렀을 경우에 글씨 색상이 바뀌는  */
-.customer-name.before,
-.customer-number.before,
-.customer-address.before{
+.customer-name.input-required,
+.customer-number.input-required,
+.customer-address.input-required{
     color: #eb0000;
 }
 
-.name-input.before,
-.number-input.before,
-.address-input.before{
+.name-input.input-required,
+.number-input.input-required,
+.address-input.input-required{
     background-color: #ff000009;
     border: 1px solid #FF0000;
 }
 
-.name-input.after,
-.number-input.after,
-.address-input.after{
+.name-input.input-complete,
+.number-input.input-complete,
+.address-input.input-complete{
     background-color: #fff;
     border: 1px solid #2657e9;
 }
@@ -1376,7 +1391,7 @@ span{
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1387,11 +1402,8 @@ span{
     align-items: center;
 }
 
-
-
 /* 고객 정보 삭제 클릭시*/
-.customer-delete-modal-wrap{
-    display: none;
+.delete-before-modal-wrap{
     position: absolute;
     top: 0;
     left: 0;
@@ -1401,19 +1413,19 @@ span{
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.customer-delete-modal-wrap.active{
+.delete-before-modal-wrap.active{
     display: block;
 }
 
 
-.customer-delete-modal{
+.delete-before-modal{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1425,7 +1437,7 @@ span{
 }
 
 
-.delete-modal-title{
+.delete-before-modal-title{
     width: 100%;
     height: 20%;
     display: flex;
@@ -1434,14 +1446,14 @@ span{
     align-items: center;
 }
 
-.delete-modal-title p{
+.delete-before-modal-title p{
     font-size: 1.25rem;
     color: red;
     font-weight: 700;
     margin-top: 10px;
 }
 
-.delete-modal-txt{
+.delete-before-modal-txt{
     width: 100%;
     height: 20%;
     display: flex;
@@ -1452,7 +1464,7 @@ span{
     line-height: 1.5;
 }
 
-.delete-agree{
+.delete-before-agree{
     width: 100%;
     height: auto;
     display: flex;
@@ -1494,12 +1506,12 @@ span{
     background-color: #3EDB38;
 }
 
-.delete-agree-text{
+.delete-before-agree-text{
     color: #959595;
     margin-left: 15px;
 }
 
-.delete-button{
+.delete-before-button{
     width: 80%;
     height: 10%;
 
@@ -1508,11 +1520,11 @@ span{
     align-items: center;
 }
 
-.delete-cancel{
+.delete-before-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: 1px solid #D8D8D8;
     outline: none;
@@ -1520,11 +1532,11 @@ span{
     cursor: pointer;
 }
 
-.delete-add{
+.delete-before-add{
     width: 35%;
     height: 100%;
     background-color: #D8D8D8;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1533,12 +1545,19 @@ span{
     cursor: pointer;
 }
 
-.delete-add::after{
+.delete-before-add::after{
     background-color: #FF0000;
 }
 
+/* 고객 정보 삭제 클릭시 visible */
+.customer-delete-before{
+    display: none;
+}
 
-
+/* 관리 항목 삭제 클릭시 visible */
+.content-delete-before{
+    display: none;
+}
 
 
 /* 고객 상세 정보 영역 */
@@ -1559,8 +1578,6 @@ span{
     display: block;
 }
 
-
-
 .customer-detail-modal{
     position: absolute;
     top: 50%;
@@ -1568,7 +1585,7 @@ span{
     transform: translate(-50%, -50%);
     width: 500px;
     height: 500px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1594,12 +1611,13 @@ span{
 }
 
 .customer-detail-modal .customer-title{
+    height: 10%;
     margin-top: -40px;
 }
 
 .customer-detail-modal .customer-name{
     width: 85%;
-    height: 12%;
+    height: 10%;
     border-radius: 15px;
     box-sizing: border-box;
     background-color: #2657e9;
@@ -1630,13 +1648,14 @@ span{
 
 .customer-detail-modal .customer-number{
     width: 85%;
-    height: 12%;
+    height: 10%;
     border-radius: 15px;
     box-sizing: border-box;
     background-color: #2657e9;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; 
+    margin-top: -15px;
 }
 
 .customer-detail-modal .customer-number span{
@@ -1655,24 +1674,28 @@ span{
 }
 
 
-
-
 .customer-detail-modal .customer-address{
     width: 85%;
-    height: 12%;
+    height: 10%;
     border-radius: 15px;
     box-sizing: border-box;
-    background-color: #2657e9;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
+    margin-top: -15px;
 }
 
 .customer-detail-modal .customer-address span{
     width: 25%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
+    background-color: #2657e9;
+    border-radius: 15px 0 0 15px;
+    height: 100%;
     margin-right: 0;
 }
 
@@ -1683,6 +1706,8 @@ span{
     box-sizing: border-box;
     border: 1px solid #2A61FF;
     background-color: #fff;
+    resize: none;
+    max-height: 75px;
 }
 
 .customer-okay{
@@ -1723,7 +1748,7 @@ span{
     transform: translate(-50%, -50%);
     width: 650px;
     height: 680px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1760,7 +1785,7 @@ span{
 #manage-add-modal-date{
     width: 82%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1785,7 +1810,7 @@ span{
 #manage-time-start{
     width: 60%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     padding: 0 20px;
     box-sizing: border-box;
     border: none;
@@ -1803,7 +1828,7 @@ span{
 #manage-time-end{
     width: 60%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     padding: 0 20px;
     box-sizing: border-box;
     border: none;
@@ -1828,7 +1853,7 @@ span{
 #manage-detail{
     width: 82%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1850,7 +1875,7 @@ span{
 #manage-price{
     width: 82%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1871,7 +1896,7 @@ span{
 #manage-etc{
     width: 82%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1893,7 +1918,7 @@ span{
     width: 30%;
     height: 100%;
     background-color: transparent;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: 1px solid #D8D8D8;
     outline: none;
@@ -1905,7 +1930,7 @@ span{
     width: 30%;
     height: 100%;
     background-color: #2A61FF;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -1942,7 +1967,7 @@ span{
     transform: translate(-50%, -50%);
     width: 650px;
     height: 680px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -1981,7 +2006,7 @@ span{
     transform: translate(-50%, -50%);
     width: 650px;
     height: 680px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -2006,7 +2031,7 @@ span{
     width: 28%;
     height: 100%;
     background-color: #fff;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border:1px solid #2657e9;
     outline: none;
@@ -2094,7 +2119,7 @@ span{
 #manage-show-time-start{
     width: 60%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     padding: 0 20px;
     border-radius: 0 20px 20px 0;
     box-sizing: border-box;
@@ -2130,7 +2155,7 @@ span{
 #manage-show-time-end{
     width: 60%;
     height: 100%;
-    border-radius: 20px;
+     border-radius: 15px;
     padding: 0 20px;
     border-radius: 0 20px 20px 0;
     box-sizing: border-box;
@@ -2273,7 +2298,7 @@ span{
     transform: translate(-50%, -50%);
     width: 470px;
     height: 320px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -2325,7 +2350,7 @@ span{
     width: 35%;
     height: 100%;
     background-color: transparent;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: 1px solid #D8D8D8;
     outline: none;
@@ -2337,7 +2362,7 @@ span{
     width: 35%;
     height: 100%;
     background-color: #0C2775;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -2346,128 +2371,11 @@ span{
     cursor: pointer;
 }
 
-
-
-/* 관리항목 취소 클릭시 */
-.content-cancel-modal-wrap{
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-width: 1200px;
-    min-height: 800px;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.3);
-
-}
-
-.content-cancel-modal-wrap.active{
-    display: block;
-}
-
-.content-cancel-modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 470px;
-    height: 320px;
-    border-radius: 20px;
-    box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.cancel-modal-title{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #0C2775;
-}
-
-
-.cancel-modal-title p{
-    margin-top: 10px;
-}
-
-.cancel-modal-txt{
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #959595;
-    line-height: 1.5;
-    margin-top: 10px;
-}
-
-.cancel-agree{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 30px;
-
-}
-
-.cancel-agree-text{
-    color: #959595;
-    margin-left: 15px;
-}
-
-.cancel-button{
-    width: 80%;
-    height: 17%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.cancel-cancel{
-    width: 35%;
-    height: 100%;
-    background-color: transparent;
-    border-radius: 20px;
-    box-sizing: border-box;
-    border: 1px solid #D8D8D8;
-    outline: none;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.cancel-add{
-    width: 35%;
-    height: 100%;
-    background-color: #0C2775;
-    border-radius: 20px;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    margin-right: 20px;
-    color: #fff;
-    cursor: pointer;
-}
 
 
 /* 고객 정보 취소 클릭시 */
-.customer-information-cancel-modal-wrap{
-    display: none;
+.input-cancel-modal-wrap{
+    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
@@ -2480,18 +2388,18 @@ span{
 
 }
 
-.customer-information-cancel-modal-wrap.active{
+.input-cancel-modal-wrap.active{
     display: block;
 }
 
-.customer-information-cancel-modal{
+.input-cancel-modal{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 470px;
     height: 320px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -2502,7 +2410,7 @@ span{
     align-items: center;
 }
 
-.customer-information-cancel-modal-title{
+.input-cancel-modal-title{
     width: 100%;
     height: 25%;
     display: flex;
@@ -2515,11 +2423,11 @@ span{
 }
 
 
-.customer-information-cancel-modal-title p{
+.input-cancel-modal-title p{
     margin-top: 10px;
 }
 
-.customer-information-cancel-modal-txt{
+.input-cancel-modal-txt{
     width: 100%;
     height: 20%;
     display: flex;
@@ -2531,7 +2439,7 @@ span{
     margin-top: 10px;
 }
 
-.customer-informationcancel-agree{
+.input-cancel-agree{
     width: 100%;
     height: auto;
     display: flex;
@@ -2541,12 +2449,12 @@ span{
     margin-bottom: 30px;
 }
 
-.customer-information-cancel-agree-text{
+.input-cancel-agree-text{
     color: #959595;
     margin-left: 15px;
 }
 
-.customer-information-cancel-button{
+.input-cancel-button{
     width: 80%;
     height: 17%;
     display: flex;
@@ -2555,11 +2463,11 @@ span{
     margin-top: 10px;
 }
 
-.customer-information-cancel-cancel{
+.input-cancel-cancel{
     width: 35%;
     height: 100%;
     background-color: transparent;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: 1px solid #D8D8D8;
     outline: none;
@@ -2567,11 +2475,11 @@ span{
     cursor: pointer;
 }
 
-.customer-information-cancel-add{
+.input-cancel-add{
     width: 35%;
     height: 100%;
     background-color: #0C2775;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -2580,6 +2488,15 @@ span{
     cursor: pointer;
 }
 
+/* 8. 고객 정보 취소 클릭시 visible */
+.customer-input-cancel{
+    display: none;
+}
+
+/* 15. 관리항목 취소 클릭시 visible */
+.input-cancel{
+    display: none;
+}
 
 
 /* 고객 정보 수정 클릭시 */
@@ -2608,7 +2525,7 @@ span{
     transform: translate(-50%, -50%);
     width: 470px;
     height: 320px;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -2662,7 +2579,7 @@ span{
     width: 35%;
     height: 100%;
     background-color: transparent;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: 1px solid #D8D8D8;
     outline: none;
@@ -2674,7 +2591,7 @@ span{
     width: 35%;
     height: 100%;
     background-color: #0C2775;
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -2683,9 +2600,8 @@ span{
     cursor: pointer;
 }
 
-/* 관리항목 수정이 완료되지 않은 경우 */
-.content-edit-nocomplete-modal-wrap{
-    display: none;
+/* 수정이 완료되지 않은 경우 */
+.content-nocomplete-modal-wrap{
     position: absolute;
     top: 0;
     left: 0;
@@ -2697,11 +2613,11 @@ span{
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.content-edit-nocomplete-modal-wrap.active{
+.content-nocomplete-modal-wrap.active{
     display: block;
 }
 
-.content-edit-nocomplete-modal{
+.content-nocomplete-modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2710,7 +2626,7 @@ span{
     height: 20%;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     position: relative;
 }
@@ -2721,7 +2637,7 @@ span{
     right: 5%;
 }
 
-.edit-nocomplete-modal-title{
+.content-nocomplete-modal-title{
     position: absolute;
     width: 100%;
     top: 50%;
@@ -2729,12 +2645,12 @@ span{
     transform: translate(0, -50%);
 }
 
-.edit-nocomplete-warn-icon{
+.content-nocomplete-warn-icon{
     width: 10%;
     margin: 0 auto;
 }
 
-.edit-nocomplete-modal-title p{
+.content-nocomplete-modal-title p{
     text-align: center;
     margin-top: 10px;
     color: #FFA000;
@@ -2742,132 +2658,23 @@ span{
     font-weight: 600;
 }
 
-
-/* 관리항목 등록이 완료되지 않은 경우 */
-.content-add-nocomplete-modal-wrap{
+/* 수정 안내창 visible */
+.content-edit{
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-width: 1200px;
-    min-height: 800px;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
-.content-add-nocomplete-modal-wrap.active{
-    display: block;
-}
-
-.content-add-nocomplete-modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: 20%;
-    background-color: #fff;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.close-btn{
-    position: absolute;
-    top: 10%;
-    right: 5%;
-}
-
-.add-nocomplete-modal-title{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-}
-
-.add-nocomplete-warn-icon{
-    width: 10%;
-    margin: 0 auto;
-}
-
-.add-nocomplete-modal-title p{
-    text-align: center;
-    margin-top: 10px;
-    color: #FFA000;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-
-
-
-/* 관리항목 삭제가 완료되지 않은 경우 */
-.content-delete-nocomplete-modal-wrap{
+/* 등록 안내창 visible */
+.content-add{
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-width: 1200px;
-    min-height: 800px;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
-.content-delete-nocomplete-modal-wrap.active{
-    display: block;
+/* 삭제 안내창 visible */
+.content-delete{
+    display: none;
 }
-
-.content-delete-nocomplete-modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: 20%;
-    background-color: #fff;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.close-btn{
-    position: absolute;
-    top: 10%;
-    right: 5%;
-}
-
-.delete-nocomplete-modal-title{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-}
-
-.delete-nocomplete-warn-icon{
-    width: 10%;
-    margin: 0 auto;
-}
-
-.delete-nocomplete-modal-title p{
-    text-align: center;
-    margin-top: 10px;
-    color: #FFA000;
-    font-size: 20px;
-    font-weight: 600;
-}
-
 
 /* 관리항목 삭제가 완료된 경우 */
-.content-delete-complete-modal-wrap{
+.content-complete-modal-wrap{
     display: none;
     position: absolute;
     top: 0;
@@ -2880,11 +2687,11 @@ span{
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.content-delete-complete-modal-wrap.active{
+.content-complete-modal-wrap.active{
     display: block;
 }
 
-.content-delete-complete-modal{
+.content-complete-modal{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2893,7 +2700,7 @@ span{
     height: 20%;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+     border-radius: 15px;
     box-sizing: border-box;
     position: relative;
 }
@@ -2904,7 +2711,7 @@ span{
     right: 5%;
 }
 
-.delete-complete-modal-title{
+.content-complete-modal-title{
     position: absolute;
     width: 100%;
     top: 50%;
@@ -2912,12 +2719,12 @@ span{
     transform: translate(0, -50%);
 }
 
-.delete-complete-warn-icon{
+.content-complete-warn-icon{
     width: 10%;
     margin: 0 auto;
 }
 
-.delete-complete-modal-title p{
+.content-complete-modal-title p{
     text-align: center;
     margin-top: 10px;
     color: #1D8C4B;
