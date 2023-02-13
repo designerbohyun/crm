@@ -25,7 +25,7 @@ img,svg{
 }
 
 ::-webkit-scrollbar {
-	width: 5px; /*스크롤바의 너비*/
+	width: 3px; /*스크롤바의 너비*/
 }
 ::-webkit-scrollbar-thumb {
  background-color: #D1DDFF; /*스크롤바의 색상*/

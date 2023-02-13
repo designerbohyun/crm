@@ -779,7 +779,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <textarea onkeydown="resize(this)" name="address-input" class="address-input autosize"></textarea>
+                        <textarea name="address-input" class="address-input autosize"></textarea>
                     </div>
     
                     <div class="customer-guide">
@@ -813,7 +813,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <textarea onkeydown="resize(this)" name="address-input" class="address-input autosize"></textarea>
+                        <textarea name="address-input" class="address-input autosize"></textarea>
                     </div>
     
                     <div class="customer-guide">
@@ -925,7 +925,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <textarea onkeydown="resize(this)" name="address-input" class="address-input autosize"></textarea>
+                        <textarea name="address-input" class="address-input autosize"></textarea>
                     </div>
 
     
@@ -1239,26 +1239,5 @@
 
     <!-- script 연결 : 고객 명단 어플 소개 페이지 - swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        let selected = document.getElementsByClassName("selected")[0];
-        let items = document.getElementsByClassName("select-items")[0];
-        selected.addEventListener("click", function(e) {
-            e.stopPropagation();
-            items.classList.toggle("select-hide");
-        });
-
-        let searchSelected = document.getElementsByClassName("search-selected")[0];
-        let searchItems = document.getElementsByClassName("search-select-items")[0];
-        searchSelected.addEventListener("click", function(e) {
-            e.stopPropagation();
-            searchItems.classList.toggle("search-select-hide");
-        });
-
-        // 고객 상세 정보 구간 입력창 : 주소 입력하는 것에 맞춰서 영역이 늘어남.
-        function resize(obj){
-            obj.style.height = "1px";
-            obj.style.height = (20+obj.scrollHeight)+"px";
-        }
-      </script>    
 </body>
 </html>
