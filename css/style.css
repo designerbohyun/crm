@@ -67,10 +67,10 @@
 .icon{
     position: absolute;
     top: 50%;
-    right: 12%;
+    right: 8%;
     transform: translate(0, -50%);
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     box-sizing: border-box;
     display: flex;
@@ -473,7 +473,7 @@
 
 /*  <!-- 검색입력창, 지우기버튼, 검색버튼 --> */
 .search-bar{
-    /* display: none; */
+    display: none;
     width: 80%;
     height: 100%;
     padding: 0 30px;
@@ -519,12 +519,14 @@
 
 /* 날짜 검색창 입력 */
 .date-search-bar{
-    display: none;
+    /* display: none; */
     width: 80%;
     height: 100%;
-    position: relative;
-    padding: 0 30px;
+    padding: 0 15px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .date-search-bar.active{
@@ -532,16 +534,12 @@
 }
 
 .start-date-search-bar{
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(-5%, -50%);
-    width: 40%;
+    width: 45%;
     height: 80%;
     display: flex;
     justify-content: left;
     align-items: center;
-
+    box-sizing: border-box;
 }
 
 .start-date-search-bar input,
@@ -551,16 +549,12 @@
     outline: none;
     background-color: transparent;
     cursor: pointer;
-
+    font-size: 1rem;
 }
 
 .end-date-search-bar{
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    width: 40%;
+    width: 45%;
     height: 80%;
-    transform: translate(-70%, -50%);
     display: flex;
     justify-content: left;
     align-items: center;
@@ -572,9 +566,14 @@
 .end-date-search-bar p{
     margin-right: 30px;
     color: #707070;
+    white-space: nowrap;
 }
 
-
+.date-search-bar-search-button{
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
 
 /* 관리항목 추가,수정,삭제버튼 영역 */
 .sc-but-area{
@@ -807,6 +806,7 @@
 
 /* 내용 영역 박스  */
 .contents-box{
+    position: relative;
     width: 98%;
     height: 79%;
     background-color: #fff;
@@ -814,66 +814,33 @@
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: 0 0 15px #d7e1ff;
-    position: relative;
+    
 }
 
 /* 고객 명단 클릭 안했을 경우, 어플 소개 페이지 */
-.swiper {
+  .swiper {
     display: none;
     width: 100%;
     height: 100%;
-  }
-  /* 어플 소개 페이지 고객 클릭이 안되어져 있을경우, 보여지게 하는 active */
-  .swiper.active{
-      display: block;
   }
 
   .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
-  }
-
-  .img1,
-  .img2,
-  .img3{
-      display: flex;
-      justify-content: center;
-      align-items: center;
   }
 
   .swiper-slide img {
     display: block;
     width: 90%;
-    height: 70%;
+    height: 100%;
+    margin: 0 auto;
     object-fit: cover;
   }
-
-  .swiper-pagination{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .swiper-pagination-bullet{
-      background-color: #2657e9;
-  }
-
+  
 
 
 
@@ -1202,7 +1169,7 @@
 
 .customer-title{
     width: 100%;
-    height: 15%;
+    height: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1254,7 +1221,7 @@
 
 .customer-address{
     width: 80%;
-    height: 10%;
+    height: 5.3rem;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -1267,7 +1234,7 @@
 
 .address-input{
     width: 77%;
-    height: 65px;
+    height: 100%;
     border-radius: 15px;
     box-sizing: border-box;
     border: none;
@@ -1542,11 +1509,12 @@ span{
     outline: none;
     margin-right: 20px;
     color: #fff;
-    cursor: pointer;
+    cursor: default;
 }
 
-.delete-before-add::after{
+.delete-before-add.agree{
     background-color: #FF0000;
+    cursor: pointer;
 }
 
 /* 고객 정보 삭제 클릭시 visible */
@@ -1592,7 +1560,7 @@ span{
     z-index: 999;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
 }
@@ -1611,7 +1579,7 @@ span{
 }
 
 .customer-detail-modal .customer-title{
-    height: 10%;
+    height: 7%;
     margin-top: -40px;
 }
 
@@ -1676,7 +1644,7 @@ span{
 
 .customer-detail-modal .customer-address{
     width: 85%;
-    height: 65px;
+    height: 5.3rem;
     border-radius: 15px;
     box-sizing: border-box;
     display: flex;
@@ -1699,15 +1667,13 @@ span{
     margin-right: 0;
 }
 
-.customer-detail-modal  .customer-address .address-input{
+.customer-detail-modal-wrap .customer-address .address-input{
     width: 75%;
-    height: 100%;
     border-radius: 0 15px 15px 0;
     box-sizing: border-box;
     border: 1px solid #2A61FF;
     background-color: #fff;
     resize: none;
-    max-height: 75px;
 }
 
 .customer-okay{

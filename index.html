@@ -302,7 +302,7 @@
                         <input type="date">
                     </div>
 
-                    <div class="search-bar-search-button">
+                    <div class="date-search-bar-search-button">
                         <img src="./img/serach-bar-search-button.png" alt="">
                     </div>
                 </div>
@@ -363,25 +363,24 @@
 
 
                 <!-- 고객 명단 클릭 안했을 경우, 어플 소개 페이지 -->
-                <div class="app-cover swiper mySwiper">
-                    <div class="app-cover-wrap swiper-wrapper">
-                      <div class="slide1 swiper-slide">
+                <div class="swiper mySwiper"> 
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
                         <div class="img1">
                             <img src="./img/slide1.png" alt="">
                           </div>
                       </div>
-                      <div class="slide2 swiper-slide">
+                      <div class="swiper-slide">
                         <div class="img2">
                             <img src="./img/slide2.png" alt="">
                         </div>
                       </div>
-                      <div class="slice3 swiper-slide">
+                      <div class="swiper-slide">
                           <div class="img3">
                               <img src="./img/slide3.png" alt="">
                           </div>
                       </div>
                     </div>
-                    <div class="swiper-pagination"></div>
                   </div>
 
 
@@ -769,7 +768,7 @@
     
                     <div class="customer-name">
                         <span>성함</span><span class="required">*</span>
-                        <input class="name-input" type="text">
+                        <input class="name-input" type="text" placeholder="성함을 입력하세요.">
                     </div>
     
                     <div class=" customer-number">
@@ -779,7 +778,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <textarea name="address-input" class="address-input autosize"></textarea>
+                        <textarea name="address-input" class="address-input autosize" placeholder="주소를 입력하세요"></textarea>
                     </div>
     
                     <div class="customer-guide">
@@ -803,7 +802,7 @@
     
                     <div class="customer-name">
                         <span>성함</span><span class="required">*</span>
-                        <input class="name-input" type="text">
+                        <input class="name-input" type="text" placeholder="성함을 입력하세요">
                     </div>
     
                     <div class=" customer-number">
@@ -813,7 +812,7 @@
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <textarea name="address-input" class="address-input autosize"></textarea>
+                        <textarea name="address-input" class="address-input autosize" placeholder="주소를 입력하세요"></textarea>
                     </div>
     
                     <div class="customer-guide">
@@ -915,17 +914,17 @@
     
                     <div class="customer-name">
                         <span>성함</span>
-                        <input class="name-input" type="text">
+                        <input class="name-input" type="text" placeholder="성함을 입력하세요">
                     </div>
     
                     <div class=" customer-number">
                         <span>전화번호</span>
-                        <input class="number-input" type="text">
+                        <input class="number-input" type="text" placeholder="번호를 입력하세요">
                     </div>
     
                     <div class="customer-address">
                         <span>주소</span>
-                        <textarea name="address-input" class="address-input autosize"></textarea>
+                        <textarea name="address-input" class="address-input autosize" placeholder="주소를 입력하세요"></textarea>
                     </div>
 
     
@@ -1238,6 +1237,20 @@
 
 
     <!-- script 연결 : 고객 명단 어플 소개 페이지 - swiper -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+      <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        }
+        });
+    </script>
+
 </body>
 </html>

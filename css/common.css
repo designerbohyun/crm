@@ -38,5 +38,9 @@ img,svg{
 
 html{
     background-color: #e8eeff;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+body{
+    overflow-x: scroll;
 }
